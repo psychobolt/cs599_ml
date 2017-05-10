@@ -23,7 +23,7 @@ Install using Conda and Pip:
 
 > For more details see [here](https://www.quora.com/How-can-I-work-with-Keras-on-a-Jupyter-notebook-using-Tensorflow-as-backend).
 
-(Windows) See [guide](https://nitishmutha.github.io/tensorflow/2017/01/22/TensorFlow-with-gpu-for-windows.html)  to install setup CUDA and install SciPy and Keras: 
+(Windows) See [guide](https://nitishmutha.github.io/tensorflow/2017/01/22/TensorFlow-with-gpu-for-windows.html) to install setup CUDA.
 
 #### Running Jupyter
 
