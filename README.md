@@ -3,7 +3,37 @@
 
 Repository for my work in a Machine Learning course
 
-## Build Docker Image
+## Development
+
+You can set up Docker or install locally.
+
+### Local Install (Tensorflow GPU support)
+
+Install Anaconda and create a environment:
+
+```sh
+conda create -n tensorflow-gpu
+# or
+conda create --prefix=<yourOwnPythonEnvDir>
+```
+
+Install using Conda and Pip:
+
+```(tensorflow-gpu) $ conda install scipy && pip install matplotlib juypter keras```
+
+> For more details see [here](https://www.quora.com/How-can-I-work-with-Keras-on-a-Jupyter-notebook-using-Tensorflow-as-backend).
+
+(Windows) See [guide](https://nitishmutha.github.io/tensorflow/2017/01/22/TensorFlow-with-gpu-for-windows.html)  to install setup CUDA and install SciPy and Keras: 
+
+#### Running Jupyter
+
+```sh
+$ (tensorflow-gpu) $ jupyter notebook --notebook-dir=<ABSOLUTE_PATH_TO_PROJECT>
+```
+
+### Docker (CPU support only)
+
+#### Build Docker Image
 
 ```sh
 docker build -t cs599_ml/anaconda3 .
@@ -11,7 +41,7 @@ docker build -t cs599_ml/anaconda3 .
 
 > "." refers to the Dockerfile directory. The assumption is you're in the cs599_ml directory
 
-## Interactive Bash
+#### Interactive Bash
 
 ```sh
 docker run -it -v <ABSOLUTE_PATH_TO_PROJECT>:/root/workspace cs599_ml/anaconda3 /bin/bash
@@ -27,7 +57,7 @@ python my_script.py
 
 > Rebuild docker image after installing new libraries.
 
-## Running Jupyter
+#### Running Jupyter
 
 ```sh
 docker run -it -p 8888:8888 -v <ABSOLUTE_PATH_TO>/jupyter_notebooks:/root/workspace/notebooks cs599_ml/anaconda3
