@@ -1,4 +1,5 @@
 FROM continuumio/anaconda3
+RUN mkdir -p /root/workspace/
 ADD requirements.txt /root/workspace/
 WORKDIR /root/workspace
 RUN /opt/conda/bin/conda install jupyter -y --quiet \ 

@@ -28,7 +28,7 @@ Install using Conda and Pip:
 #### Running Jupyter
 
 ```sh
-$ (tensorflow-gpu) $ jupyter notebook --notebook-dir=<ABSOLUTE_PATH_TO_PROJECT>
+$ (tensorflow-gpu) $ jupyter notebook --notebook-dir=<ABSOLUTE_PATH_TO>/jupyter_notebooks
 ```
 
 ### Docker (CPU support only)
@@ -44,7 +44,7 @@ docker build -t cs599_ml/anaconda3 .
 #### Interactive Bash
 
 ```sh
-docker run -it -v <ABSOLUTE_PATH_TO_PROJECT>:/root/workspace cs599_ml/anaconda3 /bin/bash
+docker run -it -v <ABSOLUTE_PATH_TO>:/root/workspace cs599_ml/anaconda3 /bin/bash
 
 # For installing libraries, run the following commands: 
 pip install <PACKAGE_NAME>
@@ -62,3 +62,7 @@ python my_script.py
 ```sh
 docker run -it -p 8888:8888 -v <ABSOLUTE_PATH_TO>/jupyter_notebooks:/root/workspace/notebooks cs599_ml/anaconda3
 ```
+
+## Utils
+
+See [utils/](utils/)
