@@ -13,8 +13,8 @@ Install Anaconda and create a environment:
 
 ```sh
 conda create -n tensorflow-gpu
-# or
-conda create --prefix=<yourOwnPythonEnvDir>
+# or using a specified path
+conda create -p <yourOwnPythonEnvDir>
 ```
 
 Install using Conda and Pip:
