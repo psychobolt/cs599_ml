@@ -19,7 +19,7 @@ conda create -p <yourOwnPythonEnvDir>
 
 Install using Conda and Pip:
 
-```(tensorflow-gpu) $ conda install scipy && pip install matplotlib juypter keras```
+```(tensorflow-gpu) $ conda install scipy && conda install pandas && pip install matplotlib jupyter keras```
 
 > For more details see [here](https://www.quora.com/How-can-I-work-with-Keras-on-a-Jupyter-notebook-using-Tensorflow-as-backend).
 
@@ -28,7 +28,7 @@ Install using Conda and Pip:
 #### Running Jupyter
 
 ```sh
-$ (tensorflow-gpu) $ jupyter notebook --notebook-dir=<ABSOLUTE_PATH_TO_PROJECT>
+$ (tensorflow-gpu) $ jupyter notebook --notebook-dir=<ABSOLUTE_PATH_TO>/jupyter_notebooks
 ```
 
 ### Docker (CPU support only)
@@ -41,11 +41,17 @@ docker build -t cs599_ml/anaconda3 .
 
 > "." refers to the Dockerfile directory. The assumption is you're in the cs599_ml directory
 
-#### Interactive Bash
+#### Running Jupyter Container
 
 ```sh
-docker run -it -v <ABSOLUTE_PATH_TO_PROJECT>:/root/workspace cs599_ml/anaconda3 /bin/bash
+docker run -it -p 8888:8888 -p 6006:6006 -v <ABSOLUTE_PATH_TO>/jupyter_notebooks:/root/workspace/notebooks cs599_ml/anaconda3
+```
 
+#### Interactive Bash
+
+Use the same command as Jupyter notebook but append ``` /bin/bash``` to the end (including space). Exclude the port mapping, if jupyter container is running.
+
+```sh
 # For installing libraries, run the following commands: 
 pip install <PACKAGE_NAME>
 pip freeze > requirements.txt
@@ -57,8 +63,6 @@ python my_script.py
 
 > Rebuild docker image after installing new libraries.
 
-#### Running Jupyter
+## Utils
 
-```sh
-docker run -it -p 8888:8888 -v <ABSOLUTE_PATH_TO>/jupyter_notebooks:/root/workspace/notebooks cs599_ml/anaconda3
-```
+See [utils/](utils/)

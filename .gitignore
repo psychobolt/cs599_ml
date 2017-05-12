@@ -1,2 +1,5 @@
-.ipynb_checkpoints
+nohup.out
+jupyter_notebooks/.ipynb_checkpoints
+jupyter_notebooks/Graph
 .DS_Store
+Hw2_data/images

@@ -1,0 +1,2 @@
+Hw2_data/test_data.csv filter=lfs diff=lfs merge=lfs -text
+Hw2_data/train_data.csv filter=lfs diff=lfs merge=lfs -text
