@@ -19,7 +19,7 @@ conda create -p <yourOwnPythonEnvDir>
 
 Install using Conda and Pip:
 
-```(tensorflow-gpu) $ conda install scipy && conda install pandas && pip install matplotlib jupyter keras```
+```(tensorflow-gpu) $ conda install scipy && conda install scikit-learn && conda install pandas && pip install matplotlib jupyter keras```
 
 > For more details see [here](https://www.quora.com/How-can-I-work-with-Keras-on-a-Jupyter-notebook-using-Tensorflow-as-backend).
 
