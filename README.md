@@ -50,7 +50,7 @@ docker build -t cs599_ml/anaconda3 .
 #### Running Jupyter Container
 
 ```sh
-docker run -it -p 8888:8888 -p 6006:6006 -v <ABSOLUTE_PATH_TO>/jupyter_notebooks:/root/workspace/notebooks cs599_ml/anaconda3
+docker run -it -p 8888:8888 -p 6006:6006 -v <ABSOLUTE_PATH_TO_PROJECT>:/root/workspace -v <ABSOLUTE_PATH_TO>/jupyter_notebooks:/root/workspace/notebooks cs599_ml/anaconda3
 ```
 
 #### Interactive Bash
